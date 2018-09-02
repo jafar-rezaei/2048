@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>بازی 2048 - سیتی گرام</title>
+	<meta name="keywords" content="سیتی گرام , CityGram,بازی 2048,بازی آنلاین 2048,2048 انلاین">
+	<meta name="description" content="سامانه سیتی گرام معرفی کننده کالاها ، خدمات و مکان های ایران ، محلی برای پیشرفت کسب و کار شما و نظر دهی کاربران در مورد آنهاست" />
+	<meta name="author" content="شرکت همراهان ایده پرداز مسئولیت محدود - رضایی" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:description" content="سامانه سیتی گرام معرفی کننده کالاها ، خدمات و مکان های ایران ، محلی برای پیشرفت کسب و کار شما و نظر دهی کاربران در مورد آنهاست" />
+	
+	<meta property="og:image" content="http://s5.citygramcdn.ir/media/grpMwVNgWbeiZ05YnaPT/LogoResized.jpg" />
+	<meta property="og:title" content="CityGram | بازی 2048 - سیتی گرام" />
+	<meta property="og:site_name" content="سامانه جامع معرفی خدمات و کسب و کار سیتی گرام" />
+	<meta property="og:url" content="http://CityGram.ir" />
+	<link href="style/main.css" rel="stylesheet" type="text/css">
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"/>
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+	<link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+	<link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="best-container">0</div>
+        <div class="score-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro byekan ">با حرکت دادن شماره ها عدد <strong>2048</strong> را تولید کنید</p>
+      <a class="restart-button byekan normal">بازی جدید</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button byekan normal ">ادامه دادن</a>
+                <a class="retry-button byekan normal ">شروع مجدد</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container"> </div>
+    </div>
+    <hr>
+    <div class="byekan " style="text-align:right;direction:rtl;font-size:14px;">
+		اشتراک گذاری بازی در : 
+		<div style="float:left">
+			<a href="https://plus.google.com/share?url=http://www.citygram.ir/2048/" target="_blank" title="" rel="nofollow"><i class="fa fa-google-plus-square" style="color:#DD4B39;font-size:38px"></i></a>
+			<a href="http://www.facebook.com/sharer.php?u=http://www.citygram.ir/2048/" target="_blank" rel="nofollow"><i class="fa fa-facebook-square" style="color:#3B5998;font-size:38px"></i></a>
+			<a href="http://twitter.com/home?status=Play 2048 Online at : http://www.citygram.ir/2048/" target="_blank" rel="nofollow"><i class="fa fa-twitter-square" style="color:#55ACEE;font-size:38px"></i></a>
+			<a href="https://www.linkedin.com/shareArticle?mini=true&title=2048&url=http://www.citygram.ir/2048/&summary=بازی+آنلاین+2048&source=citygram.ir" target="_blank" rel="nofollow"><i class="fa fa-linkedin-square" style="color:#3b5998;font-size:38px"></i></a>
+		</div>
+    </div>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
